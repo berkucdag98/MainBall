@@ -18,6 +18,7 @@ public class Move : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+
         //Get and store a reference to the Rigidbody2D component so that we can access it.
         rb2d = GetComponent<Rigidbody2D>();
     }
@@ -25,6 +26,7 @@ public class Move : MonoBehaviour
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
     void FixedUpdate()
     {
+
         //Store the current horizontal input in the float moveHorizontal.
         float moveHorizontal = Input.GetAxis("Horizontal");
 
@@ -37,12 +39,12 @@ public class Move : MonoBehaviour
         //Call the AddForce function of our Rigidbody2D rb2d supplying movement multiplied by speed to move our player.
         rb2d.AddForce(movement * speed);
 
+        rb2d.velocity = new Vector2(2f,0f);
 
-        
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            rb2d.velocity = new Vector2(1f, 2f);
+            rb2d.velocity = new Vector2(2f, 50f);
         }
 
     }

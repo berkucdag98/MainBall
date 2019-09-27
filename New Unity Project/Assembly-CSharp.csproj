@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Script\Kamera.cs" />
     <Compile Include="Assets\Script\Move.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>E:/New Unity Project/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
