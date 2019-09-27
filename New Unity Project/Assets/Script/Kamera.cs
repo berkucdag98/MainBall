@@ -4,23 +4,15 @@ using UnityEngine;
 
 public class Kamera : MonoBehaviour
 {
-    public GameObject player;
+    public Transform m_Player;
 
-    private Vector3 offset;
-
-
-    // Use this for initialization
     void Start()
     {
-        offset = transform.position - player.transform.position;
-
-        //aradaki farkı buluyoruz
+        m_Player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        transform.position = player.transform.position + offset;
-
+        transform.position = new Vector3(m_Player.position.x, m_Player.position.y, -10);
     }
 }
